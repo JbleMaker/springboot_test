@@ -1,0 +1,17 @@
+port 8080 사용중일시
+mac 기준
+터미널에서
+
+lsof -i :[portNumber]
+
+COMMAND   PID      USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+java    70331 gimjongbo   80u  IPv6 0x7830b4ce8fe6e3e1      0t0  TCP *:http-alt (LISTEN)
+
+
+kill -9 [PID]
+>> 사용중이 port를 강제 종료
+
+
+port 변경
+
+application.yml -> server.port: 8000
